@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Markers</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+    <a-scene
+        vr-mode-ui="enabled: false"
+        loading-screen="enabled: false"
+        arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+        embedded
+    >
+        <a-marker id="marker1" type="pattern" url="pattern1.patt">
+            <a-image src="im1.png" scale="4 4 1" rotation="-90 0 0"></a-image>
+        </a-marker>
+
+        <a-marker id="marker2" type="pattern" url="pattern2.patt">
+            <a-image src="im2.png" scale="4 4 1" rotation="-90 0 0"></a-image>
+        </a-marker>
+
+        <a-marker id="marker3" type="pattern" url="pattern3.patt">
+            <a-image src="im3.png" scale="4 4 1" rotation="-90 0 0"></a-image>
+        </a-marker>
+
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+</html>
